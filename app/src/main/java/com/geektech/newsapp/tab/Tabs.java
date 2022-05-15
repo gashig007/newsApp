@@ -3,12 +3,13 @@ package com.geektech.newsapp.tab;
 import androidx.fragment.app.Fragment;
 
 public class Tabs  extends Fragment {
+    private Fragment fragments;
+    private String news;
+
     public Tabs (Fragment fragments,String news){
         this.fragments=fragments;
         this.news=news;
     }
-    private Fragment fragments;
-    private String news;
 
     public Fragment getFragments() {
         return fragments;
@@ -17,8 +18,6 @@ public class Tabs  extends Fragment {
     public void setFragments(Fragment fragments) {
         this.fragments = fragments;
     }
-
-
     public String getNews() {
         return news;
     }

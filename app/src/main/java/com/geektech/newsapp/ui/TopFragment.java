@@ -7,6 +7,7 @@ import com.geektech.newsapp.base.BaseFragment;
 import com.geektech.newsapp.common.Resource;
 import com.geektech.newsapp.data.model.MainResponce;
 import com.geektech.newsapp.databinding.FragmentTopBinding;
+import com.geektech.newsapp.viewmodel.Top;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -14,7 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
 public class TopFragment extends BaseFragment<FragmentTopBinding> {
-    private NewsViewModel viewModel;
+    private Top viewModel;
     private NewsAdapter adapter;
 
     @Override
@@ -25,14 +26,14 @@ public class TopFragment extends BaseFragment<FragmentTopBinding> {
     @Override
     protected void setupViews() {
         viewModel = new ViewModelProvider(requireActivity())
-                .get(NewsViewModel.class);
+                .get(Top.class);
         adapter = new NewsAdapter();
         binding.recycler.setAdapter(adapter);
     }
 
     @Override
     protected void callRequests() {
-        viewModel.getTopNews();
+        viewModel.getTop();
     }
 
     @Override

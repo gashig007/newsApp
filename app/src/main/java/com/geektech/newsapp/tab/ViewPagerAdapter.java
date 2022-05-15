@@ -7,14 +7,14 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import java.util.ArrayList;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
-    private String tabTitles[] = new String[] { "Top News", "Tab2", "Tab3" };
-    private ArrayList<Tabs> fragments;
+    private ArrayList<Tabs> fragments = new ArrayList<>();
 
     public ViewPagerAdapter(@NonNull Fragment fragment) {
         super(fragment);
     }
-    public void setFragments (ArrayList<Tabs> fragments){
-        this.fragments=new ArrayList<>();
+
+    public void setFragments(ArrayList<Tabs> fragments) {
+        this.fragments = fragments;
         this.fragments.addAll(fragments);
     }
 

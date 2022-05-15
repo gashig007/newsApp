@@ -1,5 +1,7 @@
 package com.geektech.newsapp.ui;
 
+import android.widget.Toast;
+
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -51,6 +53,7 @@ public class BusinessFragment extends BaseFragment<FragmentBussinessBinding> {
                         break;
                     }
                     case SUCCESS:{
+                        Toast.makeText(requireActivity(), "34", Toast.LENGTH_SHORT).show();
                         adapter.setNewsList(resource.data.getArticles());
                         break;
                     }

@@ -1,8 +1,12 @@
 package com.geektech.newsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
+
+import com.geektech.newsapp.ui.NewsFragment;
 
 import dagger.hilt.android.AndroidEntryPoint;
 
